@@ -7,9 +7,9 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      first: 50,
-      second: 50,
-      third: 50
+      first: 0,
+      second: 0,
+      third: 0
     };
 
     this.sendValues = this.sendValues.bind(this);
@@ -46,17 +46,14 @@ class App extends React.Component {
         <div className="satisfyWrapper">
           <h3 className="satisfyTitle">How satisfied are you?</h3>
           <SatisfiedBox 
-            mode="defaultSlider"
             onValueChange={this.onInputchange} 
             order="first"
             val={this.state.first}/>
           <SatisfiedBox
-            mode="blueSlider" 
             onValueChange={this.onInputchange} 
             order="second"
             val={this.state.second}/>
           <SatisfiedBox
-            mode="redSlider" 
             onValueChange={this.onInputchange} 
             order="third"
             val={this.state.third}/>

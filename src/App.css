@@ -16,8 +16,10 @@
 
 }
 
-.defaultSlider {
+.slider {
   -webkit-appearance: none;
+  --sliderSize: 25px;
+  --sliderColor: rgba(255,255,255,1);
   width: 100%;
   height: 6px;
   background: rgba(30, 30, 30);
@@ -28,89 +30,23 @@
   margin: 5px 30px;
 }
 
-.blueSlider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, 
-    rgba(30,30,30,1) 0%, rgba(30,30,30,1) 50%, rgba(0,246,255,1) 100%);
-  outline: none;
-  opacity: 0.8;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  margin: 5px 30px;
-}
-
-.redSlider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, 
-    rgba(255,0,0,1) 0%, rgba(30,30,30,1) 50%, rgba(30,30,30,1) 100%);
-  outline: none;
-  opacity: 0.8;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  margin: 5px 30px;
-}
-
-.defaultSlider:hover {
+.slider:hover {
   opacity: 1;
 }
 
-.defaultSlider::-webkit-slider-thumb {
+.slider::-webkit-slider-thumb {
   -webkit-appearance: none;
+  width: var(--sliderSize);
+  height: var(--sliderSize);
+  background: var(--sliderColor);
   appearance: none;
-  width: 18px;
-  height: 18px;
-  background: white;
   cursor: pointer;
 }
 
-.defaultSlider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  background: white;
-  cursor: pointer;
-}
-
-.blueSlider:hover {
-  opacity: 1;
-}
-
-.blueSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: rgba(0,246,255,1);
-  cursor: pointer;
-}
-
-.blueSlider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: rgba(0,246,255,1);
-  cursor: pointer;
-}
-
-.redSlider:hover {
-  opacity: 1;
-}
-
-.redSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: rgba(255,0,0,1);
-  cursor: pointer;
-}
-
-.redSlider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: rgba(255,0,0,1);
+.slider::-moz-range-thumb {
+  width: var(--sliderSize);
+  height: var(--sliderSize);
+  background: var(--sliderColor);
   cursor: pointer;
 }
 
@@ -128,7 +64,8 @@
   width: 180px;
   height: 40px;
   border: 1px yellow solid;
-  border-radius: 5px;;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .clearBtn {
